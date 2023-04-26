@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-#--------@LOCKEDSSH-----------#
+#-----------@CYBERSSH-----------#
 source ShellBot.sh
 touch lista
 [[ -z $1 ]] && {
@@ -15,7 +15,7 @@ ShellBot.username
 menu() {
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="Olá <b>${message_from_first_name[$id]}</b>, BEM VINDO AO BOT\n\n"
+        msg+="Olá <b>${message_from_first_name[$id]}</b>, BEM VINDO AO BOT CYBERSSH\n\n"
         msg+="Gere seu teste em nosso servidores 🇧🇷"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
@@ -34,7 +34,7 @@ menu_compra() {
     fun_menucompra $id_chatuser
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+=" 1 LOGIN 20 R$  2 LOGIN 35 R$ 3 LOGIN 30R$."
+        msg+=" 1 LOGIN 15 R$  2 LOGIN 25 R$ 3 LOGIN 36R$."
         ShellBot.editMessageText --chat_id $id_chatuser \
         --message_id ${callback_query_message_message_id[$id]} \
         --text "$(echo -e $msg)" \
@@ -60,10 +60,10 @@ criarteste() {
         --text "Volte amanhã"
       return 0
     }
-    usuario=$(echo SSH$(( RANDOM% + 350 )))
-    senha=$((RANDOM% + 999999))
+    usuario=$(echo Cyber$(( RANDOM% + 350 )))
+    senha=$((RANDOM% + 9999))
     limite='1'
-    tempo='5'
+    tempo='6'
     tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
