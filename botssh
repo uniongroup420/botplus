@@ -21,7 +21,7 @@ menu() {
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>👇🏽 DISPONIBILIZAMOS SOMENTE 👇🏽</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="<b>🔵 TIM 🟣 VIVO 🔴 CLARO</b>\n"
+        msg+="<b>🔵 TIM   🟣 VIVO   🔴 CLARO</b>\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
@@ -56,7 +56,9 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-    --text "$(echo -e "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n        <b>✅ Criado com sucesso ✅</b>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n            👤 USUARIO: <code>$usuario</code>\n               🔑 SENHA: <code>$senha</code>\n             ⏰ Expira em: $tempo Horas")\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n   \n <b>Suporte das 8h até às 23h, https://wa.me/message/7H5OLNVZBV6CP1</b>\n  ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬" \
+    --text "$(echo "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n        <b>✅ Criado com sucesso ✅</b>n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n 👤 USUARIO: <code>$usuario</code>\n            🔑 SENHA:   <code>$senha</code>\n             ⏰ Expira em: $tempo Horas")\n
+ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n   \n <b>Suporte das 8h até às 23h\n
+    https://wa.me/message/7H5OLNVZBV6CP1</b>\n  ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬" \
     --parse_mode html
     return 0
 }
@@ -114,7 +116,7 @@ infouser () {
 
 unset botao1
 botao1=''
-ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR TESTE ♻️' --callback_data 'gerarssh'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERE SEU TESTE ♻️' --callback_data 'gerarssh'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 ARQUIVOS SKS 🔰' --callback_data 'sksenviar'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 ARQUIVOS EHI 🔰' --callback_data 'ehienviar'
