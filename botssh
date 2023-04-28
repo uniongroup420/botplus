@@ -23,9 +23,9 @@ menu() {
         msg="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
         msg+="✌️😃 Ola <b>${message_from_first_name[$id]}</b>, Bem vindo!\n"
         msg+="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
-        msg+="<b>GERE SEU TESTE DE 8 HORAS GRÁTIS</b>\n"
+        msg+="<b>GERE SEU TESTE DE 6 HORAS GRÁTIS</b>\n"
         msg+="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
-        msg+="<b>🟡Oi 🔵TIM 🟣VIVO 🔴CLARO</b>\n"
+        msg+="<b> 🔵TIM 🟣VIVO 🔴CLARO</b>\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
@@ -45,7 +45,7 @@ PIX() {
         msg+="💰 └ R$ 15,00\n"
         msg+="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
         msg+="✅           CONFIRMAR PAGAMENTO           ✅\n"
-        msg+="ENVIE O COMPROVANTE P/ @CoutySSH_YT\n"
+        msg+="ENVIE O COMPROVANTE P/ @Cyberssh23\n"
         msg+="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
         msg+="VERIFICAÇÃO DE PAGAMENTO EM ATÉ 24H\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
@@ -67,7 +67,7 @@ pix() {
         msg+="💰 └ R$ 15,00\n"
         msg+="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
         msg+="✅           CONFIRMAR PAGAMENTO           ✅\n"
-        msg+="ENVIE O COMPROVANTE PARA @CoutySSH_YT\n"
+        msg+="ENVIE O COMPROVANTE PARA @Cyberssh23\n"
         msg+="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
         msg+="VERIFICAÇÃO DE PAGAMENTO EM ATÉ 24H\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
@@ -87,7 +87,7 @@ criarteste() {
     usuario=$(echo Cyber$(( RANDOM% + 999 )))
     senha=$((RANDOM% + 9999))
     limite='1'
-    tempo='8'
+    tempo='6'
     tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
@@ -201,9 +201,9 @@ infouser () {
 
 unset botao1
 botao1=''
-ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR LOGIN ♻️' --callback_data 'gerarssh'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR SEU LOGIN ♻️' --callback_data 'gerarssh'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '📥 RENOVAR VPN 📥' --callback_data '2' --url 'https://wa.me/message/7H5OLNVZBV6CP1' # RENOVAÇÃO
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '📥 APLICATIVO 📥' --callback_data '2' --url https://wa.me/message/7H5OLNVZBV6CP1' # LINK APP
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '📥 BAIXAR APLICATIVO 📥' --callback_data '2' --url https://wa.me/message/7H5OLNVZBV6CP1' # LINK APP
 ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🤑 SEJA REVENDEDOR 🤑️' --callback_data '2' --url 'https://wa.me/message/7H5OLNVZBV6CP1' # LINK PV
 ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🏷️ ENVIAR COMPROVANTE 🏷️️' --callback_data '2' --url 'https://wa.me/message/7H5OLNVZBV6CP1' # LINK PV
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
